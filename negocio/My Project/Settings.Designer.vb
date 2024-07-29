@@ -57,16 +57,16 @@ Namespace My
 End Namespace
 
 Namespace My
-
-    <Global.Microsoft.VisualBasic.HideModuleNameAttribute(), _
-     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-     Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute()> _
+    
+    <Global.Microsoft.VisualBasic.HideModuleNameAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute()>  _
     Friend Module MySettingsProperty
-
-        <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")> _
-        Friend ReadOnly Property Settings() As Global.WindowsApp1.My.MySettings
+        
+        <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
+        Friend ReadOnly Property Settings() As Global.negocio.My.MySettings
             Get
-                Return Global.WindowsApp1.My.MySettings.Default
+                Return Global.negocio.My.MySettings.Default
             End Get
         End Property
     End Module

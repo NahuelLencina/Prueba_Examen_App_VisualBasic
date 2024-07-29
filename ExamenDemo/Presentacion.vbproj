@@ -73,18 +73,29 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente.vb" />
-    <Compile Include="fmrProductos.Designer.vb">
-      <DependentUpon>fmrProductos.vb</DependentUpon>
+    <Compile Include="FrmAltaCliente.Designer.vb">
+      <DependentUpon>FrmAltaCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="fmrProductos.vb">
+    <Compile Include="FrmAltaCliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="FrmAltaProducto.Designer.vb">
+      <DependentUpon>FrmAltaProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAltaProducto.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="FrmProductos.Designer.vb">
+      <DependentUpon>FrmProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPresentacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPresentacion.Designer.vb">
+      <DependentUpon>FrmPresentacion.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmClientes.Designer.vb">
@@ -103,6 +114,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -114,15 +126,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Producto.vb" />
-    <Compile Include="VentaItem.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="fmrProductos.resx">
-      <DependentUpon>fmrProductos.vb</DependentUpon>
+    <EmbeddedResource Include="FrmAltaCliente.resx">
+      <DependentUpon>FrmAltaCliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="FrmAltaProducto.resx">
+      <DependentUpon>FrmAltaProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductos.resx">
+      <DependentUpon>FrmProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPresentacion.resx">
+      <DependentUpon>FrmPresentacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.vb</DependentUpon>
@@ -148,6 +164,19 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dominio\dominio.vbproj">
+      <Project>{dce678ab-d9b7-401b-858d-6f92fd1459ed}</Project>
+      <Name>dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\negocio\negocio.vbproj">
+      <Project>{406049e6-eb2d-4d2a-9c14-59777bb4d807}</Project>
+      <Name>negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

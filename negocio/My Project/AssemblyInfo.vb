@@ -4,21 +4,21 @@ Imports System.Runtime.InteropServices
 
 ' La información general de un ensamblado se controla mediante el siguiente 
 ' conjunto de atributos. Cambie estos valores de atributo para modificar la información
-' asociada con un ensamblado.
+' asociada a un ensamblado.
 
 ' Revisar los valores de los atributos del ensamblado
 
-<Assembly: AssemblyTitle("WindowsApp1")>
+<Assembly: AssemblyTitle("negocio")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("WindowsApp1")>
+<Assembly: AssemblyProduct("negocio")>
 <Assembly: AssemblyCopyright("Copyright ©  2024")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-<Assembly: Guid("c1b68794-7773-4cd2-af06-c52d83e19ea4")>
+<Assembly: Guid("5b2dea5f-1237-4428-b79d-b7de7885d14f")>
 
 ' La información de versión de un ensamblado consta de los cuatro valores siguientes:
 '

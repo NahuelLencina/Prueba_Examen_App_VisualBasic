@@ -4,7 +4,7 @@ Imports System.Runtime.InteropServices
 
 ' La información general de un ensamblado se controla mediante el siguiente 
 ' conjunto de atributos. Cambie estos valores de atributo para modificar la información
-' asociada con un ensamblado.
+' asociada a un ensamblado.
 
 ' Revisar los valores de los atributos del ensamblado
 
@@ -18,7 +18,7 @@ Imports System.Runtime.InteropServices
 <Assembly: ComVisible(False)>
 
 'El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-<Assembly: Guid("7acbcb75-eb9c-4e6a-b36c-c20f0723df18")>
+<Assembly: Guid("646380e7-8748-4394-bc33-22eba26cbca3")>
 
 ' La información de versión de un ensamblado consta de los cuatro valores siguientes:
 '
