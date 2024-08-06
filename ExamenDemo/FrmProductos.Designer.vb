@@ -26,8 +26,10 @@ Partial Class FrmProductos
         Me.btnEliminarProducto = New System.Windows.Forms.Button()
         Me.btnModificarProducto = New System.Windows.Forms.Button()
         Me.btnAgregarProducto = New System.Windows.Forms.Button()
-        Me.txtBuscarProducto = New System.Windows.Forms.TextBox()
+        Me.txtFiltroProducto = New System.Windows.Forms.TextBox()
         Me.lblFiltroProducto = New System.Windows.Forms.Label()
+        Me.cbxCampoProducto = New System.Windows.Forms.ComboBox()
+        Me.cbxCriterioProducto = New System.Windows.Forms.ComboBox()
         CType(Me.dgvListadosProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,12 +70,12 @@ Partial Class FrmProductos
         Me.btnAgregarProducto.Text = "Agregar"
         Me.btnAgregarProducto.UseVisualStyleBackColor = True
         '
-        'txtBuscarProducto
+        'txtFiltroProducto
         '
-        Me.txtBuscarProducto.Location = New System.Drawing.Point(118, 26)
-        Me.txtBuscarProducto.Name = "txtBuscarProducto"
-        Me.txtBuscarProducto.Size = New System.Drawing.Size(301, 20)
-        Me.txtBuscarProducto.TabIndex = 11
+        Me.txtFiltroProducto.Location = New System.Drawing.Point(118, 26)
+        Me.txtFiltroProducto.Name = "txtFiltroProducto"
+        Me.txtFiltroProducto.Size = New System.Drawing.Size(301, 20)
+        Me.txtFiltroProducto.TabIndex = 11
         '
         'lblFiltroProducto
         '
@@ -84,13 +86,33 @@ Partial Class FrmProductos
         Me.lblFiltroProducto.TabIndex = 12
         Me.lblFiltroProducto.Text = "Filtro Rapido"
         '
+        'cbxCampoProducto
+        '
+        Me.cbxCampoProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxCampoProducto.FormattingEnabled = True
+        Me.cbxCampoProducto.Location = New System.Drawing.Point(92, 322)
+        Me.cbxCampoProducto.Name = "cbxCampoProducto"
+        Me.cbxCampoProducto.Size = New System.Drawing.Size(134, 21)
+        Me.cbxCampoProducto.TabIndex = 28
+        '
+        'cbxCriterioProducto
+        '
+        Me.cbxCriterioProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxCriterioProducto.FormattingEnabled = True
+        Me.cbxCriterioProducto.Location = New System.Drawing.Point(239, 322)
+        Me.cbxCriterioProducto.Name = "cbxCriterioProducto"
+        Me.cbxCriterioProducto.Size = New System.Drawing.Size(134, 21)
+        Me.cbxCriterioProducto.TabIndex = 30
+        '
         'FrmProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(482, 401)
+        Me.Controls.Add(Me.cbxCriterioProducto)
+        Me.Controls.Add(Me.cbxCampoProducto)
         Me.Controls.Add(Me.lblFiltroProducto)
-        Me.Controls.Add(Me.txtBuscarProducto)
+        Me.Controls.Add(Me.txtFiltroProducto)
         Me.Controls.Add(Me.btnEliminarProducto)
         Me.Controls.Add(Me.btnModificarProducto)
         Me.Controls.Add(Me.btnAgregarProducto)
@@ -105,7 +127,9 @@ Partial Class FrmProductos
     Friend WithEvents btnEliminarProducto As Button
     Friend WithEvents btnModificarProducto As Button
     Friend WithEvents btnAgregarProducto As Button
-    Friend WithEvents txtBuscarProducto As TextBox
+    Friend WithEvents txtFiltroProducto As TextBox
     Friend WithEvents lblFiltroProducto As Label
     Private WithEvents dgvListadosProductos As DataGridView
+    Private WithEvents cbxCriterioProducto As ComboBox
+    Private WithEvents cbxCampoProducto As ComboBox
 End Class

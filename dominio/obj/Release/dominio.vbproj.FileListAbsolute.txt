@@ -1,0 +1,9 @@
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\dominio\bin\Release\dominio.dll
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\dominio\bin\Release\dominio.pdb
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\dominio\bin\Release\dominio.xml
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\dominio\obj\Release\dominio.Resources.resources
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\dominio\obj\Release\dominio.vbproj.GenerateResource.cache
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\dominio\obj\Release\dominio.vbproj.CoreCompileInputs.cache
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\dominio\obj\Release\dominio.dll
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\dominio\obj\Release\dominio.xml
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\dominio\obj\Release\dominio.pdb

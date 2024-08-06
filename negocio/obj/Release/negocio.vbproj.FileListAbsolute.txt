@@ -1,0 +1,14 @@
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\negocio\bin\Release\negocio.dll
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\negocio\bin\Release\negocio.pdb
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\negocio\bin\Release\negocio.xml
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\negocio\bin\Release\dominio.dll
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\negocio\bin\Release\dominio.pdb
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\negocio\bin\Release\dominio.xml
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\negocio\obj\Release\negocio.vbproj.AssemblyReference.cache
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\negocio\obj\Release\negocio.Resources.resources
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\negocio\obj\Release\negocio.vbproj.GenerateResource.cache
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\negocio\obj\Release\negocio.vbproj.CoreCompileInputs.cache
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\negocio\obj\Release\negocio.vbproj.CopyComplete
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\negocio\obj\Release\negocio.dll
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\negocio\obj\Release\negocio.xml
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\negocio\obj\Release\negocio.pdb

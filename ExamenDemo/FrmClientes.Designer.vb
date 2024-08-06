@@ -29,7 +29,7 @@ Partial Class FrmClientes
         Me.dgvClientes = New System.Windows.Forms.DataGridView()
         Me.lblFiltro = New System.Windows.Forms.Label()
         Me.cbxCampoCliente = New System.Windows.Forms.ComboBox()
-        Me.btnBuscarCliente = New System.Windows.Forms.Button()
+        Me.txtBuscarCriterio = New System.Windows.Forms.TextBox()
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -89,27 +89,27 @@ Partial Class FrmClientes
         '
         'cbxCampoCliente
         '
+        Me.cbxCampoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbxCampoCliente.FormattingEnabled = True
-        Me.cbxCampoCliente.Location = New System.Drawing.Point(54, 334)
+        Me.cbxCampoCliente.Location = New System.Drawing.Point(100, 334)
         Me.cbxCampoCliente.Name = "cbxCampoCliente"
-        Me.cbxCampoCliente.Size = New System.Drawing.Size(266, 21)
+        Me.cbxCampoCliente.Size = New System.Drawing.Size(137, 21)
         Me.cbxCampoCliente.TabIndex = 25
         '
-        'btnBuscarCliente
+        'txtBuscarCriterio
         '
-        Me.btnBuscarCliente.Location = New System.Drawing.Point(349, 329)
-        Me.btnBuscarCliente.Name = "btnBuscarCliente"
-        Me.btnBuscarCliente.Size = New System.Drawing.Size(75, 29)
-        Me.btnBuscarCliente.TabIndex = 27
-        Me.btnBuscarCliente.Text = "Buscar"
-        Me.btnBuscarCliente.UseVisualStyleBackColor = True
+        Me.txtBuscarCriterio.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtBuscarCriterio.Location = New System.Drawing.Point(254, 334)
+        Me.txtBuscarCriterio.Name = "txtBuscarCriterio"
+        Me.txtBuscarCriterio.Size = New System.Drawing.Size(125, 20)
+        Me.txtBuscarCriterio.TabIndex = 28
         '
         'FrmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(482, 401)
-        Me.Controls.Add(Me.btnBuscarCliente)
+        Me.Controls.Add(Me.txtBuscarCriterio)
         Me.Controls.Add(Me.cbxCampoCliente)
         Me.Controls.Add(Me.lblFiltro)
         Me.Controls.Add(Me.txtFiltroCliente)
@@ -118,7 +118,7 @@ Partial Class FrmClientes
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgvClientes)
         Me.Name = "FrmClientes"
-        Me.Text = "FrmClientes"
+        Me.Text = "FrmCliente"
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -131,6 +131,6 @@ Partial Class FrmClientes
     Friend WithEvents btnAgregar As Button
     Friend WithEvents lblFiltro As Label
     Private WithEvents dgvClientes As DataGridView
-    Friend WithEvents cbxCampoCliente As ComboBox
-    Friend WithEvents btnBuscarCliente As Button
+    Private WithEvents txtBuscarCriterio As TextBox
+    Private WithEvents cbxCampoCliente As ComboBox
 End Class

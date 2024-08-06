@@ -31,9 +31,17 @@ Public Class FrmAltaProducto
 
     Private Sub btnAceptarProducto_Click(sender As Object, e As EventArgs) Handles btnAceptarProducto.Click
 
+        Dim precio As Decimal
+
+        ' Validar que el precio ingresado sea un número válido
+        If Not Decimal.TryParse(txtPrecioProducto.Text, precio) Then
+            MessageBox.Show("Por favor, ingrese un precio válido.")
+            Return
+        End If
+
         Dim producto As New Producto With {
         .Nombre = txtNombreProducto.Text,
-        .Precio = Decimal.Parse(txtPrecioProducto.Text),
+        .Precio = precio,
         .Categoria = txtCategoriaProducto.Text
         }
         Dim negocio As New ProductoNegocio()

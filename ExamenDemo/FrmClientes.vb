@@ -75,7 +75,7 @@ Public Class FrmClientes
         cbxCampoCliente.Items.Add("Nombre")
         cbxCampoCliente.Items.Add("Telefono")
         cbxCampoCliente.Items.Add("Email")
-        cbxCampoCliente.Items.Add("Todos")
+        ' cbxCampoCliente.Items.Add("Todos")
         cargar()
     End Sub
 
@@ -97,28 +97,37 @@ Public Class FrmClientes
         End If
     End Sub
 
-    Private Sub btnBuscarCliente_Click(sender As Object, e As EventArgs) Handles btnBuscarCliente.Click
 
+
+    Private Sub txtBuscarCriterio_TextChanged(sender As Object, e As EventArgs) Handles txtBuscarCriterio.TextChanged
+
+        Dim listaFiltrada As New List(Of Cliente)
+        Dim filtro As String = txtBuscarCriterio.Text
         Dim negocio As New ClienteNegocio
 
         Try
-            If cbxCampoCliente.SelectedItem IsNot Nothing Then
-                If cbxCampoCliente.SelectedItem.ToString() Is "Todos" Then
-                    dgvClientes.DataSource = negocio.listar()
-                Else
-                    Dim campo As String = cbxCampoCliente.SelectedItem.ToString()
-                    dgvClientes.DataSource = negocio.filtrar(campo)
 
+            If filtro.Length > 2 Then
+                If cbxCampoCliente.SelectedItem Is "Nombre" Then
+                    listaFiltrada = listaClientes.FindAll(Function(x) x.Nombre.ToUpper().Contains(filtro.ToUpper()))
+                ElseIf cbxCampoCliente.SelectedItem Is "Email" Then
+                    listaFiltrada = listaClientes.FindAll(Function(x) x.Email.ToUpper().Contains(filtro.ToUpper()))
+                ElseIf cbxCampoCliente.SelectedItem Is "Telefono" Then
+                    listaFiltrada = listaClientes.FindAll(Function(x) x.Telefono.ToUpper().Contains(filtro.ToUpper()))
                 End If
+            Else
+                listaFiltrada = listaClientes
             End If
+
+
+
+            dgvClientes.DataSource = Nothing
+            dgvClientes.DataSource = listaFiltrada
+            ocultarColumnas()
+
         Catch ex As Exception
-            MessageBox.Show(MyBase.ToString())
+            MessageBox.Show(ex.ToString())
         End Try
+
     End Sub
-
-    Private Sub cbxCampoCliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxCampoCliente.SelectedIndexChanged
-
-        Return
-    End Sub
-
 End Class

@@ -8,7 +8,7 @@ Public Class FrmProductos
     Private listaProductos As New List(Of Producto)
     Private Sub btnAgregarProducto_Click(sender As Object, e As EventArgs) Handles btnAgregarProducto.Click
         Dim altaProducto As New FrmAltaProducto
-        FrmAltaProducto.ShowDialog()
+        altaProducto.ShowDialog()
         cargar()
     End Sub
 
@@ -62,9 +62,10 @@ Public Class FrmProductos
         End Try
     End Sub
 
-    Private Sub txtBuscarProducto_TextChanged(sender As Object, e As EventArgs) Handles txtBuscarProducto.TextChanged
+    Private Sub txtFiltroProducto_TextChanged(sender As Object, e As EventArgs) Handles txtFiltroProducto.TextChanged
         Dim listaFiltrada As New List(Of Producto)
-        Dim filtro As String = txtBuscarProducto.Text
+        Dim filtro As String = txtFiltroProducto.Text
+        cbxCriterioProducto.Items.Clear()
 
         If filtro.Length > 2 Then
             listaFiltrada = listaProductos.FindAll(Function(x) x.Nombre.ToUpper().Contains(filtro.ToUpper()) OrElse x.Categoria.ToUpper().Contains(filtro.ToUpper()))
@@ -78,7 +79,8 @@ Public Class FrmProductos
     End Sub
 
     Private Sub FrmProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        cbxCampoProducto.Items.Add("Nombre")
+        cbxCampoProducto.Items.Add("Categoria")
         cargar()
     End Sub
 
@@ -86,5 +88,47 @@ Public Class FrmProductos
         If dgvListadosProductos.CurrentRow IsNot Nothing Then
             Dim seleccionado As Producto = CType(dgvListadosProductos.CurrentRow.DataBoundItem, Producto)
         End If
+    End Sub
+
+
+    Private Sub cbxCriterioProducto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxCriterioProducto.SelectedIndexChanged
+        Dim listaFiltrada As New List(Of Producto)
+        Dim filtro As String = cbxCriterioProducto.Text
+
+        If cbxCampoProducto.SelectedItem Is "Nombre" Then
+            listaFiltrada = listaProductos.FindAll(Function(x) x.Nombre.ToUpper().Contains(filtro.ToUpper()))
+        ElseIf cbxCampoProducto.SelectedItem Is "Categoria" Then
+            listaFiltrada = listaProductos.FindAll(Function(x) x.Categoria.ToUpper().Contains(filtro.ToUpper()))
+        End If
+
+        dgvListadosProductos.DataSource = Nothing
+        dgvListadosProductos.DataSource = listaFiltrada
+        ocultarColumnas()
+    End Sub
+
+    Private Sub cbxCampoProducto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxCampoProducto.SelectedIndexChanged
+        Dim negocio As New ProductoNegocio
+        Dim productos As List(Of Producto) = negocio.listar()
+        cbxCriterioProducto.Items.Clear()
+
+        If cbxCampoProducto.SelectedItem IsNot Nothing Then
+            Dim campoSeleccionado As String = cbxCampoProducto.SelectedItem.ToString()
+
+            If campoSeleccionado Is "Nombre" Then
+                Dim nombresUnicos = productos.Select(Function(p) p.Nombre).Distinct().ToList()
+                For Each nombre In nombresUnicos
+                    cbxCriterioProducto.Items.Add(nombre)
+                Next
+
+            ElseIf campoSeleccionado = "Categoria" Then
+                ' Obtener categorías únicas
+                Dim categoriasUnicas = productos.Select(Function(p) p.Categoria).Distinct().ToList()
+                For Each categoria In categoriasUnicas
+                    cbxCriterioProducto.Items.Add(categoria)
+                Next
+
+            End If
+        End If
+
     End Sub
 End Class
