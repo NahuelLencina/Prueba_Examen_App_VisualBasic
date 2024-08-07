@@ -5,12 +5,12 @@ Public Class AccesoDatos
         Private comando As SqlCommand
         Private lectorField As SqlDataReader
 
-        ' Property
-        Public ReadOnly Property Lector As SqlClient.SqlDataReader
-            Get
-                Return lectorField
-            End Get
-        End Property
+    ' Property
+    Public ReadOnly Property Lector As SqlDataReader
+        Get
+            Return lectorField
+        End Get
+    End Property
 
     ' Constructor 
     Public Sub New()
