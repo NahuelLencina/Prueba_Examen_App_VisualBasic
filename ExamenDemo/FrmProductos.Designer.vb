@@ -108,7 +108,7 @@ Partial Class FrmProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(482, 401)
+        Me.ClientSize = New System.Drawing.Size(606, 401)
         Me.Controls.Add(Me.cbxCriterioProducto)
         Me.Controls.Add(Me.cbxCampoProducto)
         Me.Controls.Add(Me.lblFiltroProducto)
@@ -118,6 +118,7 @@ Partial Class FrmProductos
         Me.Controls.Add(Me.btnAgregarProducto)
         Me.Controls.Add(Me.dgvListadosProductos)
         Me.Name = "FrmProductos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmProductos"
         CType(Me.dgvListadosProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

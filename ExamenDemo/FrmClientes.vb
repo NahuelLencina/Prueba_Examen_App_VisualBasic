@@ -130,4 +130,28 @@ Public Class FrmClientes
         End Try
 
     End Sub
+
+    Private Sub cbxCampoCliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxCampoCliente.SelectedIndexChanged
+        txtBuscarCriterio.Clear()
+    End Sub
+
+    Private Sub btnNuevaVenta_Click(sender As Object, e As EventArgs) Handles btnNuevaVenta.Click
+        If dgvClientes.CurrentRow IsNot Nothing Then
+            Dim seleccionado As Cliente = DirectCast(dgvClientes.CurrentRow.DataBoundItem, Cliente)
+            Dim cargarDatosVenta As New FrmNuevaVenta(seleccionado)
+            cargarDatosVenta.ShowDialog()
+
+
+        End If
+
+
+
+
+    End Sub
+
+    Private Sub FrmClientes_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        cbxCampoCliente.Items.Clear()
+        cbxCampoCliente.SelectedIndex = -1
+        txtBuscarCriterio.Clear()
+    End Sub
 End Class

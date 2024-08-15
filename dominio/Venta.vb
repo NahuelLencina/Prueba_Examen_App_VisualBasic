@@ -4,4 +4,7 @@
     Public Property Fecha As DateTime
     Public Property Total As Decimal
 
+    Public Property Nombre As String
+
+
 End Class

@@ -30,6 +30,7 @@ Partial Class FrmClientes
         Me.lblFiltro = New System.Windows.Forms.Label()
         Me.cbxCampoCliente = New System.Windows.Forms.ComboBox()
         Me.txtBuscarCriterio = New System.Windows.Forms.TextBox()
+        Me.btnNuevaVenta = New System.Windows.Forms.Button()
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -104,11 +105,21 @@ Partial Class FrmClientes
         Me.txtBuscarCriterio.Size = New System.Drawing.Size(125, 20)
         Me.txtBuscarCriterio.TabIndex = 28
         '
+        'btnNuevaVenta
+        '
+        Me.btnNuevaVenta.Location = New System.Drawing.Point(486, 78)
+        Me.btnNuevaVenta.Name = "btnNuevaVenta"
+        Me.btnNuevaVenta.Size = New System.Drawing.Size(75, 69)
+        Me.btnNuevaVenta.TabIndex = 29
+        Me.btnNuevaVenta.Text = "Generar Venta"
+        Me.btnNuevaVenta.UseVisualStyleBackColor = True
+        '
         'FrmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(482, 401)
+        Me.ClientSize = New System.Drawing.Size(606, 401)
+        Me.Controls.Add(Me.btnNuevaVenta)
         Me.Controls.Add(Me.txtBuscarCriterio)
         Me.Controls.Add(Me.cbxCampoCliente)
         Me.Controls.Add(Me.lblFiltro)
@@ -118,6 +129,7 @@ Partial Class FrmClientes
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgvClientes)
         Me.Name = "FrmClientes"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmCliente"
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -133,4 +145,5 @@ Partial Class FrmClientes
     Private WithEvents dgvClientes As DataGridView
     Private WithEvents txtBuscarCriterio As TextBox
     Private WithEvents cbxCampoCliente As ComboBox
+    Friend WithEvents btnNuevaVenta As Button
 End Class

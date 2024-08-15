@@ -102,7 +102,7 @@ Partial Class FrmAltaProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(482, 401)
+        Me.ClientSize = New System.Drawing.Size(606, 401)
         Me.Controls.Add(Me.btnCancelarProducto)
         Me.Controls.Add(Me.btnAceptarProducto)
         Me.Controls.Add(Me.txtCategoriaProducto)
@@ -112,6 +112,7 @@ Partial Class FrmAltaProducto
         Me.Controls.Add(Me.txtNombreProducto)
         Me.Controls.Add(Me.lblNombreProducto)
         Me.Name = "FrmAltaProducto"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmAltaProducto"
         Me.ResumeLayout(False)
         Me.PerformLayout()

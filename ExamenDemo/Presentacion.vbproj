@@ -85,6 +85,18 @@
     <Compile Include="FrmAltaProducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmCargaArticulos.Designer.vb">
+      <DependentUpon>FrmCargaArticulos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCargaArticulos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevaVenta.Designer.vb">
+      <DependentUpon>FrmNuevaVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNuevaVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmProductos.Designer.vb">
       <DependentUpon>FrmProductos.vb</DependentUpon>
     </Compile>
@@ -133,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAltaProducto.resx">
       <DependentUpon>FrmAltaProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCargaArticulos.resx">
+      <DependentUpon>FrmCargaArticulos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevaVenta.resx">
+      <DependentUpon>FrmNuevaVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductos.resx">
       <DependentUpon>FrmProductos.vb</DependentUpon>

@@ -13,4 +13,8 @@
         Dim FrmVenta As New FrmVentas
         FrmVentas.ShowDialog()
     End Sub
+
+    Private Sub btnNuevaVenta_Click(sender As Object, e As EventArgs) Handles btnNuevaVenta.Click
+        FrmClientes.ShowDialog()
+    End Sub
 End Class

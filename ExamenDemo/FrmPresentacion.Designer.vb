@@ -26,6 +26,7 @@ Partial Class FrmPresentacion
         Me.btnProductos = New System.Windows.Forms.Button()
         Me.btnVentas = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnNuevaVenta = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnClientes
@@ -59,22 +60,33 @@ Partial Class FrmPresentacion
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(181, 88)
+        Me.Label1.Location = New System.Drawing.Point(242, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(109, 25)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Bienvenido"
         '
+        'btnNuevaVenta
+        '
+        Me.btnNuevaVenta.Location = New System.Drawing.Point(427, 167)
+        Me.btnNuevaVenta.Name = "btnNuevaVenta"
+        Me.btnNuevaVenta.Size = New System.Drawing.Size(75, 58)
+        Me.btnNuevaVenta.TabIndex = 4
+        Me.btnNuevaVenta.Text = "Nueva Venta"
+        Me.btnNuevaVenta.UseVisualStyleBackColor = True
+        '
         'FrmPresentacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(482, 401)
+        Me.ClientSize = New System.Drawing.Size(606, 401)
+        Me.Controls.Add(Me.btnNuevaVenta)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnVentas)
         Me.Controls.Add(Me.btnProductos)
         Me.Controls.Add(Me.btnClientes)
         Me.Name = "FrmPresentacion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmPresentación"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -85,4 +97,5 @@ Partial Class FrmPresentacion
     Friend WithEvents btnProductos As Button
     Friend WithEvents btnVentas As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnNuevaVenta As Button
 End Class

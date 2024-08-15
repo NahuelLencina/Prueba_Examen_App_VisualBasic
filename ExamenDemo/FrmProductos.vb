@@ -15,6 +15,8 @@ Public Class FrmProductos
 
     Private Sub ocultarColumnas()
         dgvListadosProductos.Columns("Id").Visible = False
+        dgvListadosProductos.Columns("Cantidad").Visible = False
+        dgvListadosProductos.Columns("ItemsPrecioTotal").Visible = False
     End Sub
     Private Sub cargar()
         Try
@@ -82,6 +84,7 @@ Public Class FrmProductos
         cbxCampoProducto.Items.Add("Nombre")
         cbxCampoProducto.Items.Add("Categoria")
         cargar()
+
     End Sub
 
     Private Sub dgvListadosProductos_SelectionChanged(sender As Object, e As EventArgs) Handles dgvListadosProductos.SelectionChanged
@@ -101,9 +104,12 @@ Public Class FrmProductos
             listaFiltrada = listaProductos.FindAll(Function(x) x.Categoria.ToUpper().Contains(filtro.ToUpper()))
         End If
 
+
+
         dgvListadosProductos.DataSource = Nothing
         dgvListadosProductos.DataSource = listaFiltrada
         ocultarColumnas()
+
     End Sub
 
     Private Sub cbxCampoProducto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxCampoProducto.SelectedIndexChanged
@@ -128,7 +134,14 @@ Public Class FrmProductos
                 Next
 
             End If
+
+
         End If
 
+    End Sub
+
+    Private Sub FrmProductos_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        cbxCampoProducto.Items.Clear()
+        cbxCampoProducto.SelectedIndex = -1
     End Sub
 End Class

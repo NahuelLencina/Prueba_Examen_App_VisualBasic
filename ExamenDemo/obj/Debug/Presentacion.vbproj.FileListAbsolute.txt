@@ -22,3 +22,5 @@ C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\ExamenDemo\obj\Debug\Presenta
 C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\ExamenDemo\obj\Debug\ExamenDemo.exe
 C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\ExamenDemo\obj\Debug\ExamenDemo.xml
 C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\ExamenDemo\obj\Debug\ExamenDemo.pdb
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\ExamenDemo\obj\Debug\ExamenDemo.frmNuevaVenta.resources
+C:\Users\Nahuel Lencina\source\repos\Prueba_Examen\ExamenDemo\obj\Debug\ExamenDemo.FrmCargaArticulos.resources

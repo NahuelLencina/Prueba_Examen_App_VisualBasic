@@ -102,7 +102,7 @@ Partial Class FrmAltaCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(482, 401)
+        Me.ClientSize = New System.Drawing.Size(606, 401)
         Me.Controls.Add(Me.btnCancelarCliente)
         Me.Controls.Add(Me.btnAceptarCliente)
         Me.Controls.Add(Me.txtEmailCliente)
@@ -112,6 +112,7 @@ Partial Class FrmAltaCliente
         Me.Controls.Add(Me.txtNombreCliente)
         Me.Controls.Add(Me.lblNombreCliente)
         Me.Name = "FrmAltaCliente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmAltaCliente"
         Me.ResumeLayout(False)
         Me.PerformLayout()
