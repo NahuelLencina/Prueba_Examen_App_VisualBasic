@@ -4,7 +4,15 @@ Imports System.Linq
 
 
 Public Class FrmCargaArticulos
-    Private listaProductos As New List(Of Producto)
+
+    Public listaProductos As New List(Of Producto)
+
+    Public ReadOnly Property ProductosSeleccionados As List(Of Producto)
+        Get
+            Return DirectCast(dgvArticulosSeleccionado.DataSource, List(Of Producto))
+        End Get
+    End Property
+
     Private Sub btnAgregarProducto_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
         Try
@@ -57,6 +65,8 @@ Public Class FrmCargaArticulos
 
                 ' Oculta la columna "Id"
                 dgvArticulosSeleccionado.Columns("Id").Visible = False
+                lblValorTotal.Text = sumaTotal()
+
             End If
 
         Catch ex As Exception
@@ -77,14 +87,10 @@ Public Class FrmCargaArticulos
             listaProductos = negocio.listar()
             dgvListadosProductos.DataSource = listaProductos
             ocultarColumnas()
-
-
         Catch ex As Exception
             MessageBox.Show(ex.ToString())
         End Try
     End Sub
-
-
 
     Private Sub btnEliminarProducto_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Try
@@ -128,7 +134,7 @@ Public Class FrmCargaArticulos
 
                 End If
                 dgvArticulosSeleccionado.Columns("Id").Visible = False
-
+                lblValorTotal.Text = sumaTotal()
             End If
 
         Catch ex As Exception
@@ -211,5 +217,28 @@ Public Class FrmCargaArticulos
         cbxCampoProducto.Items.Clear()
         cbxCampoProducto.SelectedIndex = -1
         cbxCriterioProducto.Items.Clear()
+    End Sub
+
+    Private Function sumaTotal() As Decimal
+        Dim total As Decimal = 0
+
+        For Each row As DataGridViewRow In dgvArticulosSeleccionado.Rows
+            ' Verifica que la fila no sea una fila nueva (la fila en blanco para agregar un nuevo registro)
+            If Not row.IsNewRow Then
+                ' Suma el valor de la columna "Precio" (asegurándote de que no sea nulo)
+                Dim CellValue As Object = row.Cells("ItemsPrecioTotal").Value
+                If CellValue IsNot Nothing AndAlso IsNumeric(CellValue) Then
+                    total += Convert.ToDecimal(CellValue)
+                End If
+            End If
+        Next
+        Return total
+
+    End Function
+
+    Private Sub btnFinalCompra_Click(sender As Object, e As EventArgs) Handles btnFinalCompra.Click
+        Me.DialogResult = DialogResult.OK
+        Me.lblValorTotal = lblValorTotal
+        Me.Close()
     End Sub
 End Class

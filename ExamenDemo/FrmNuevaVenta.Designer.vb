@@ -32,6 +32,9 @@ Partial Class FrmNuevaVenta
         Me.btnAceptarVenta = New System.Windows.Forms.Button()
         Me.btnAgregarArticulos = New System.Windows.Forms.Button()
         Me.btnLimpiarCamposNuevaVenta = New System.Windows.Forms.Button()
+        Me.lblTotal = New System.Windows.Forms.Label()
+        Me.dgvDetalleArticulos = New System.Windows.Forms.DataGridView()
+        CType(Me.dgvDetalleArticulos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtEmailClienteNuevaVenta
@@ -118,11 +121,31 @@ Partial Class FrmNuevaVenta
         Me.btnLimpiarCamposNuevaVenta.Text = "Limpiar Campos"
         Me.btnLimpiarCamposNuevaVenta.UseVisualStyleBackColor = True
         '
+        'lblTotal
+        '
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Location = New System.Drawing.Point(453, 264)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(0, 13)
+        Me.lblTotal.TabIndex = 42
+        '
+        'dgvDetalleArticulos
+        '
+        Me.dgvDetalleArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDetalleArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.dgvDetalleArticulos.Location = New System.Drawing.Point(335, 67)
+        Me.dgvDetalleArticulos.Name = "dgvDetalleArticulos"
+        Me.dgvDetalleArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvDetalleArticulos.Size = New System.Drawing.Size(233, 171)
+        Me.dgvDetalleArticulos.TabIndex = 41
+        '
         'FrmNuevaVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(606, 401)
+        Me.Controls.Add(Me.lblTotal)
+        Me.Controls.Add(Me.dgvDetalleArticulos)
         Me.Controls.Add(Me.btnLimpiarCamposNuevaVenta)
         Me.Controls.Add(Me.btnAgregarArticulos)
         Me.Controls.Add(Me.btnCancelarVenta)
@@ -136,6 +159,7 @@ Partial Class FrmNuevaVenta
         Me.Name = "FrmNuevaVenta"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmNuevaVenta"
+        CType(Me.dgvDetalleArticulos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -151,4 +175,6 @@ Partial Class FrmNuevaVenta
     Private WithEvents btnAceptarVenta As Button
     Private WithEvents btnAgregarArticulos As Button
     Private WithEvents btnLimpiarCamposNuevaVenta As Button
+    Friend WithEvents lblTotal As Label
+    Private WithEvents dgvDetalleArticulos As DataGridView
 End Class

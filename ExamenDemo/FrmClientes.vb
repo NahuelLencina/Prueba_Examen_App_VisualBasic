@@ -10,6 +10,7 @@ Public Class FrmClientes
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Dim altaCliente As New FrmAltaCliente
+        'FrmNuevaVenta.establecerTitulo("Nuevo Cliente")
         altaCliente.ShowDialog()
         cargar()
     End Sub
@@ -19,7 +20,7 @@ Public Class FrmClientes
             If dgvClientes.CurrentRow IsNot Nothing Then
                 Dim seleccionado As Cliente = DirectCast(dgvClientes.CurrentRow.DataBoundItem, Cliente)
                 Dim modificarForm As New FrmAltaCliente(seleccionado)
-
+                '  FrmNuevaVenta.establecerTitulo("Modificar")
                 modificarForm.ShowDialog()
                 ' Después de que el formulario de modificación se cierre, recargar los datos
                 cargar()
@@ -141,11 +142,7 @@ Public Class FrmClientes
             Dim cargarDatosVenta As New FrmNuevaVenta(seleccionado)
             cargarDatosVenta.ShowDialog()
 
-
         End If
-
-
-
 
     End Sub
 

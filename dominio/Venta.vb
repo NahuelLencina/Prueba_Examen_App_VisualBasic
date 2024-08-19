@@ -6,5 +6,4 @@
 
     Public Property Nombre As String
 
-
 End Class

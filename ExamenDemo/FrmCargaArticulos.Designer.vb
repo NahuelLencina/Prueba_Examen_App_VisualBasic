@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmCargaArticulos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmCargaArticulos
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.cbxCriterioProducto = New System.Windows.Forms.ComboBox()
         Me.cbxCampoProducto = New System.Windows.Forms.ComboBox()
@@ -30,6 +30,9 @@ Partial Class FrmCargaArticulos
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.dgvListadosProductos = New System.Windows.Forms.DataGridView()
         Me.dgvArticulosSeleccionado = New System.Windows.Forms.DataGridView()
+        Me.lblTotal = New System.Windows.Forms.Label()
+        Me.lblValorTotal = New System.Windows.Forms.Label()
+        Me.btnFinalCompra = New System.Windows.Forms.Button()
         CType(Me.dgvListadosProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvArticulosSeleccionado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -106,11 +109,40 @@ Partial Class FrmCargaArticulos
         Me.dgvArticulosSeleccionado.Size = New System.Drawing.Size(233, 171)
         Me.dgvArticulosSeleccionado.TabIndex = 39
         '
+        'lblTotal
+        '
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Location = New System.Drawing.Point(479, 289)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(46, 13)
+        Me.lblTotal.TabIndex = 40
+        Me.lblTotal.Text = "Total : $"
+        '
+        'lblValorTotal
+        '
+        Me.lblValorTotal.AutoSize = True
+        Me.lblValorTotal.Location = New System.Drawing.Point(531, 290)
+        Me.lblValorTotal.Name = "lblValorTotal"
+        Me.lblValorTotal.Size = New System.Drawing.Size(0, 13)
+        Me.lblValorTotal.TabIndex = 41
+        '
+        'btnFinalCompra
+        '
+        Me.btnFinalCompra.Location = New System.Drawing.Point(466, 336)
+        Me.btnFinalCompra.Name = "btnFinalCompra"
+        Me.btnFinalCompra.Size = New System.Drawing.Size(97, 39)
+        Me.btnFinalCompra.TabIndex = 42
+        Me.btnFinalCompra.Text = "Finalizar Compra"
+        Me.btnFinalCompra.UseVisualStyleBackColor = True
+        '
         'FrmCargaArticulos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(606, 401)
+        Me.Controls.Add(Me.btnFinalCompra)
+        Me.Controls.Add(Me.lblValorTotal)
+        Me.Controls.Add(Me.lblTotal)
         Me.Controls.Add(Me.dgvArticulosSeleccionado)
         Me.Controls.Add(Me.cbxCriterioProducto)
         Me.Controls.Add(Me.cbxCampoProducto)
@@ -137,4 +169,7 @@ Partial Class FrmCargaArticulos
     Friend WithEvents btnAdd As Button
     Private WithEvents dgvListadosProductos As DataGridView
     Private WithEvents dgvArticulosSeleccionado As DataGridView
+    Friend WithEvents lblTotal As Label
+    Friend WithEvents lblValorTotal As Label
+    Friend WithEvents btnFinalCompra As Button
 End Class

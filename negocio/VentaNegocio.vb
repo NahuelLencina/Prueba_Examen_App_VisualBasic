@@ -51,18 +51,48 @@ Public Class VentaNegocio
 
     End Sub
 
-    Public Sub nuevaVenta(nuevo As Venta)
+    Public Sub agregarVenta(nuevo As Venta)
         Dim datos As New AccesoDatos()
         Try
-            datos.setearConsulta("")
+            datos.setearConsulta("INSERT INTO ventas (idCliente, Fecha, Total) VALUES (@idCliente, @Fecha, @Total)")
+
+            datos.setearParametro("@idCliente", nuevo.IdCliente)
+            datos.setearParametro("@fecha", nuevo.Fecha)
+            datos.setearParametro("@total", nuevo.Total)
+
+            datos.ejecutarAccion()
 
         Catch ex As Exception
-            Throw
+            Throw ex
         Finally
             datos.cerrarConexion()
         End Try
 
 
     End Sub
+
+    ' Método para obtener el último ID insertado
+    Public Function obtenerUltimoIdVenta() As Integer
+        Dim datos As New AccesoDatos()
+        Dim ultimoId As Integer = -1 ' Valor predeterminado para indicar que no se encontró un ID
+
+        Try
+            datos.setearConsulta("SELECT TOP 1 v.Id FROM Ventas v ORDER BY v.Id DESC")
+            datos.ejecutarLectura()
+
+            If datos.Lector.Read() Then
+                If Not IsDBNull(datos.Lector("Id")) Then
+                    ultimoId = Convert.ToInt32(datos.Lector("Id"))
+                End If
+            End If
+
+            Return ultimoId
+
+        Catch ex As Exception
+            Throw ex
+        Finally
+            datos.cerrarConexion()
+        End Try
+    End Function
 
 End Class
