@@ -68,6 +68,23 @@ Public Class FrmNuevaVenta
         Try
             'Agregar la venta
             negocio.agregarVenta(venta)
+
+            Dim negocioIt As New VentaItemNegocio()
+            Dim ultimoIdVenta As Integer = negocio.obtenerUltimoIdVenta()
+
+
+            For Each producto As Producto In FrmCargaArticulos.ProductosSeleccionados
+                Dim ventaItem As New VentaItem With {
+                    .IdVenta = ultimoIdVenta,
+                    .IdProducto = producto.Id,
+                    .PrecioUnitario = producto.Precio,
+                    .Cantidad = producto.Cantidad,
+                    .PrecioTotal = producto.Precio * producto.Cantidad
+                }
+
+                negocioIt.agregarVentaItem(ventaItem)
+            Next
+
             MessageBox.Show("Carga exitosa.")
             Close()
 

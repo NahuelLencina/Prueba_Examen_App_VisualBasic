@@ -40,7 +40,7 @@ Public Class FrmVentas
                     seleccionado = DirectCast(dgvListados.CurrentRow.DataBoundItem, Venta)
                     negocio.eliminar(seleccionado.Id)
                     cargar()
-                    MessageBox.Show("Venta eliminada exitosamente...")
+                    ' MessageBox.Show("Venta eliminada exitosamente...")
                 End If
             End If
         Catch ex As Exception
