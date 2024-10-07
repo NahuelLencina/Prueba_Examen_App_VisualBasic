@@ -18,4 +18,8 @@
 
         FrmClientes.ShowDialog()
     End Sub
+
+    Private Sub btnCerrarPresentacion_Click(sender As Object, e As EventArgs) Handles btnCerrarPresentacion.Click
+        Close()
+    End Sub
 End Class

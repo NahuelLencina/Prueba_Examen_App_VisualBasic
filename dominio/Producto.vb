@@ -8,11 +8,6 @@
     Public Property Cantidad As Integer
     Public Property ItemsPrecioTotal As Decimal
 
-    'Public ReadOnly Property ItemsPrecioTotal As Decimal
 
-    '    Get
-    '        Return Precio * Cantidad
-    '    End Get
-    'End Property
 
 End Class

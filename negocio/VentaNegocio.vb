@@ -71,6 +71,23 @@ Public Class VentaNegocio
 
     End Sub
 
+    Public Sub modificarVenta(modificar As Venta)
+        Dim datos As New AccesoDatos
+        Try
+            datos.setearConsulta("update ventas Set Total = @total, Fecha = @fecha, IdCliente = @IdCliente where Id = @Id")
+            datos.setearParametro("@total", modificar.Total)
+            datos.setearParametro("@IdCliente", modificar.IdCliente)
+            datos.setearParametro("@Fecha", modificar.Fecha)
+            datos.ejecutarAccion()
+
+            datos.ejecutarAccion()
+        Catch ex As Exception
+            Throw ex
+        Finally
+            datos.cerrarConexion()
+        End Try
+    End Sub
+
     ' Método para obtener el último ID insertado
     Public Function obtenerUltimoIdVenta() As Integer
         Dim datos As New AccesoDatos()

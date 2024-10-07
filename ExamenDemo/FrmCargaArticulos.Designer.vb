@@ -33,6 +33,7 @@ Partial Class FrmCargaArticulos
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.lblValorTotal = New System.Windows.Forms.Label()
         Me.btnFinalCompra = New System.Windows.Forms.Button()
+        Me.btnCancelarCargaArticulos = New System.Windows.Forms.Button()
         CType(Me.dgvListadosProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvArticulosSeleccionado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -135,11 +136,21 @@ Partial Class FrmCargaArticulos
         Me.btnFinalCompra.Text = "Finalizar Compra"
         Me.btnFinalCompra.UseVisualStyleBackColor = True
         '
+        'btnCancelarCargaArticulos
+        '
+        Me.btnCancelarCargaArticulos.Location = New System.Drawing.Point(344, 336)
+        Me.btnCancelarCargaArticulos.Name = "btnCancelarCargaArticulos"
+        Me.btnCancelarCargaArticulos.Size = New System.Drawing.Size(92, 39)
+        Me.btnCancelarCargaArticulos.TabIndex = 43
+        Me.btnCancelarCargaArticulos.Text = "Cancelar"
+        Me.btnCancelarCargaArticulos.UseVisualStyleBackColor = True
+        '
         'FrmCargaArticulos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(606, 401)
+        Me.Controls.Add(Me.btnCancelarCargaArticulos)
         Me.Controls.Add(Me.btnFinalCompra)
         Me.Controls.Add(Me.lblValorTotal)
         Me.Controls.Add(Me.lblTotal)
@@ -172,4 +183,5 @@ Partial Class FrmCargaArticulos
     Friend WithEvents lblTotal As Label
     Friend WithEvents lblValorTotal As Label
     Friend WithEvents btnFinalCompra As Button
+    Friend WithEvents btnCancelarCargaArticulos As Button
 End Class

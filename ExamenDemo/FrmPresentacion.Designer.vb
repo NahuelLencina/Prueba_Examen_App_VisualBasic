@@ -27,6 +27,7 @@ Partial Class FrmPresentacion
         Me.btnVentas = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnNuevaVenta = New System.Windows.Forms.Button()
+        Me.btnCerrarPresentacion = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnClientes
@@ -75,11 +76,21 @@ Partial Class FrmPresentacion
         Me.btnNuevaVenta.Text = "Nueva Venta"
         Me.btnNuevaVenta.UseVisualStyleBackColor = True
         '
+        'btnCerrarPresentacion
+        '
+        Me.btnCerrarPresentacion.Location = New System.Drawing.Point(469, 301)
+        Me.btnCerrarPresentacion.Name = "btnCerrarPresentacion"
+        Me.btnCerrarPresentacion.Size = New System.Drawing.Size(75, 44)
+        Me.btnCerrarPresentacion.TabIndex = 35
+        Me.btnCerrarPresentacion.Text = "Cerrar"
+        Me.btnCerrarPresentacion.UseVisualStyleBackColor = True
+        '
         'FrmPresentacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(606, 401)
+        Me.Controls.Add(Me.btnCerrarPresentacion)
         Me.Controls.Add(Me.btnNuevaVenta)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnVentas)
@@ -88,6 +99,7 @@ Partial Class FrmPresentacion
         Me.Name = "FrmPresentacion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmPresentación"
+        Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -98,4 +110,5 @@ Partial Class FrmPresentacion
     Friend WithEvents btnVentas As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents btnNuevaVenta As Button
+    Friend WithEvents btnCerrarPresentacion As Button
 End Class

@@ -31,6 +31,7 @@ Partial Class FrmClientes
         Me.cbxCampoCliente = New System.Windows.Forms.ComboBox()
         Me.txtBuscarCriterio = New System.Windows.Forms.TextBox()
         Me.btnNuevaVenta = New System.Windows.Forms.Button()
+        Me.btnAtrasClientes = New System.Windows.Forms.Button()
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -114,11 +115,21 @@ Partial Class FrmClientes
         Me.btnNuevaVenta.Text = "Generar Venta"
         Me.btnNuevaVenta.UseVisualStyleBackColor = True
         '
+        'btnAtrasClientes
+        '
+        Me.btnAtrasClientes.Location = New System.Drawing.Point(486, 321)
+        Me.btnAtrasClientes.Name = "btnAtrasClientes"
+        Me.btnAtrasClientes.Size = New System.Drawing.Size(75, 44)
+        Me.btnAtrasClientes.TabIndex = 35
+        Me.btnAtrasClientes.Text = "Atras"
+        Me.btnAtrasClientes.UseVisualStyleBackColor = True
+        '
         'FrmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(606, 401)
+        Me.Controls.Add(Me.btnAtrasClientes)
         Me.Controls.Add(Me.btnNuevaVenta)
         Me.Controls.Add(Me.txtBuscarCriterio)
         Me.Controls.Add(Me.cbxCampoCliente)
@@ -146,4 +157,5 @@ Partial Class FrmClientes
     Private WithEvents txtBuscarCriterio As TextBox
     Private WithEvents cbxCampoCliente As ComboBox
     Friend WithEvents btnNuevaVenta As Button
+    Friend WithEvents btnAtrasClientes As Button
 End Class

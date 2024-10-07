@@ -144,4 +144,8 @@ Public Class FrmProductos
         cbxCampoProducto.Items.Clear()
         cbxCampoProducto.SelectedIndex = -1
     End Sub
+
+    Private Sub btnAtrasVentas_Click(sender As Object, e As EventArgs) Handles btnAtrasProductos.Click
+        Close()
+    End Sub
 End Class

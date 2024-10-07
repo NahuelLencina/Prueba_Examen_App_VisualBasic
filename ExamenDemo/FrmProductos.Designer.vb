@@ -30,6 +30,7 @@ Partial Class FrmProductos
         Me.lblFiltroProducto = New System.Windows.Forms.Label()
         Me.cbxCampoProducto = New System.Windows.Forms.ComboBox()
         Me.cbxCriterioProducto = New System.Windows.Forms.ComboBox()
+        Me.btnAtrasProductos = New System.Windows.Forms.Button()
         CType(Me.dgvListadosProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -104,11 +105,21 @@ Partial Class FrmProductos
         Me.cbxCriterioProducto.Size = New System.Drawing.Size(134, 21)
         Me.cbxCriterioProducto.TabIndex = 30
         '
+        'btnAtrasProductos
+        '
+        Me.btnAtrasProductos.Location = New System.Drawing.Point(483, 322)
+        Me.btnAtrasProductos.Name = "btnAtrasProductos"
+        Me.btnAtrasProductos.Size = New System.Drawing.Size(75, 44)
+        Me.btnAtrasProductos.TabIndex = 35
+        Me.btnAtrasProductos.Text = "Atras"
+        Me.btnAtrasProductos.UseVisualStyleBackColor = True
+        '
         'FrmProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(606, 401)
+        Me.Controls.Add(Me.btnAtrasProductos)
         Me.Controls.Add(Me.cbxCriterioProducto)
         Me.Controls.Add(Me.cbxCampoProducto)
         Me.Controls.Add(Me.lblFiltroProducto)
@@ -133,4 +144,5 @@ Partial Class FrmProductos
     Private WithEvents dgvListadosProductos As DataGridView
     Private WithEvents cbxCriterioProducto As ComboBox
     Private WithEvents cbxCampoProducto As ComboBox
+    Friend WithEvents btnAtrasProductos As Button
 End Class

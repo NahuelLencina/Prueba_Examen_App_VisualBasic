@@ -44,8 +44,10 @@ Public Class FrmNuevaVenta
     Private Sub ocultarDataGridView()
         If dgvDetalleArticulos.RowCount = 0 Then
             dgvDetalleArticulos.Visible = False
+            btnAceptarVenta.Visible = False
         Else
             dgvDetalleArticulos.Visible = True
+            btnAceptarVenta.Visible = True
         End If
     End Sub
     Private Sub ocultarColumnas()
@@ -93,5 +95,9 @@ Public Class FrmNuevaVenta
             MessageBox.Show("Ocurrió un error al agregar la venta: " & ex.Message)
         End Try
 
+    End Sub
+
+    Private Sub btnCancelarVenta_Click(sender As Object, e As EventArgs) Handles btnCancelarVenta.Click
+        Close()
     End Sub
 End Class

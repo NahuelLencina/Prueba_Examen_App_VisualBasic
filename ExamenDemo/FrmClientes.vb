@@ -10,7 +10,6 @@ Public Class FrmClientes
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Dim altaCliente As New FrmAltaCliente
-        'FrmNuevaVenta.establecerTitulo("Nuevo Cliente")
         altaCliente.ShowDialog()
         cargar()
     End Sub
@@ -20,7 +19,7 @@ Public Class FrmClientes
             If dgvClientes.CurrentRow IsNot Nothing Then
                 Dim seleccionado As Cliente = DirectCast(dgvClientes.CurrentRow.DataBoundItem, Cliente)
                 Dim modificarForm As New FrmAltaCliente(seleccionado)
-                '  FrmNuevaVenta.establecerTitulo("Modificar")
+
                 modificarForm.ShowDialog()
                 ' Después de que el formulario de modificación se cierre, recargar los datos
                 cargar()
@@ -104,7 +103,7 @@ Public Class FrmClientes
 
         Dim listaFiltrada As New List(Of Cliente)
         Dim filtro As String = txtBuscarCriterio.Text
-        Dim negocio As New ClienteNegocio
+        ' Dim negocio As New ClienteNegocio
 
         Try
 
@@ -150,5 +149,9 @@ Public Class FrmClientes
         cbxCampoCliente.Items.Clear()
         cbxCampoCliente.SelectedIndex = -1
         txtBuscarCriterio.Clear()
+    End Sub
+
+    Private Sub btnAtrasVentas_Click(sender As Object, e As EventArgs) Handles btnAtrasClientes.Click
+        Close()
     End Sub
 End Class

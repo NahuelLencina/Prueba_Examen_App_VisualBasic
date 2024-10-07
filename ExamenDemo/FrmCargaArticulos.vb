@@ -241,4 +241,9 @@ Public Class FrmCargaArticulos
         Me.lblValorTotal = lblValorTotal
         Me.Close()
     End Sub
+
+    Private Sub btnCancelarCargaArticulos_Click(sender As Object, e As EventArgs) Handles btnCancelarCargaArticulos.Click
+
+        Close()
+    End Sub
 End Class

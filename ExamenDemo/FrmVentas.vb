@@ -1,7 +1,9 @@
 ﻿Imports negocio
 Imports dominio
 Public Class FrmVentas
+
     Private listaVentas As New List(Of Venta)
+
     Private Sub FrmVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cargar()
     End Sub
@@ -9,6 +11,7 @@ Public Class FrmVentas
     Public Sub cargar()
         Try
             Dim negocio As New VentaNegocio
+
             listaVentas = negocio.listar
             dgvListados.DataSource = listaVentas
             ocultarColumnas()
@@ -22,12 +25,6 @@ Public Class FrmVentas
     Private Sub ocultarColumnas()
         dgvListados.Columns("ID").Visible = False
         dgvListados.Columns("IdCliente").Visible = False
-    End Sub
-
-    Private Sub dgvListados_SelectionChanged(sender As Object, e As EventArgs) Handles dgvListados.SelectionChanged
-        If dgvListados.CurrentRow IsNot Nothing Then
-            Dim seleccionado As Venta = CType(dgvListados.CurrentRow.DataBoundItem, Venta)
-        End If
     End Sub
 
     Private Sub btnEliminarVenta_Click(sender As Object, e As EventArgs) Handles btnEliminarVenta.Click
@@ -48,7 +45,32 @@ Public Class FrmVentas
         End Try
     End Sub
 
-    Private Sub btnNuevaVenta_Click(sender As Object, e As EventArgs)
+    Private Sub btnModificarVenta_Click(sender As Object, e As EventArgs)
+        Try
+            If dgvListados.CurrentRow IsNot Nothing Then
+                Dim seleccionado As Venta = DirectCast(dgvListados.CurrentRow.DataBoundItem, Venta)
+            End If
+        Catch ex As Exception
+            Throw ex
 
+        End Try
+    End Sub
+
+    Private Sub btnViewVenta_Click(sender As Object, e As EventArgs) Handles btnViewVenta.Click
+
+        Try
+            If dgvListados.CurrentRow IsNot Nothing Then
+                Dim seleccionado As Venta = DirectCast(dgvListados.CurrentRow.DataBoundItem, Venta)
+                Dim FormItemsVentas As New FrmVentaItem(seleccionado.Id)
+                FormItemsVentas.ShowDialog()
+            End If
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
+    Private Sub btnAtrasVentas_Click(sender As Object, e As EventArgs) Handles btnAtrasVentas.Click
+        Close()
     End Sub
 End Class

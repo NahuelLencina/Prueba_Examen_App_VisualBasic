@@ -23,10 +23,12 @@ Partial Class FrmVentas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnEliminarVenta = New System.Windows.Forms.Button()
-        Me.btnModificarVenta = New System.Windows.Forms.Button()
         Me.dgvListados = New System.Windows.Forms.DataGridView()
         Me.btnViewVenta = New System.Windows.Forms.Button()
+        Me.dgvItemsVentas = New System.Windows.Forms.DataGridView()
+        Me.btnAtrasVentas = New System.Windows.Forms.Button()
         CType(Me.dgvListados, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvItemsVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnEliminarVenta
@@ -37,15 +39,6 @@ Partial Class FrmVentas
         Me.btnEliminarVenta.TabIndex = 25
         Me.btnEliminarVenta.Text = "Eliminar"
         Me.btnEliminarVenta.UseVisualStyleBackColor = True
-        '
-        'btnModificarVenta
-        '
-        Me.btnModificarVenta.Location = New System.Drawing.Point(482, 23)
-        Me.btnModificarVenta.Name = "btnModificarVenta"
-        Me.btnModificarVenta.Size = New System.Drawing.Size(75, 44)
-        Me.btnModificarVenta.TabIndex = 24
-        Me.btnModificarVenta.Text = "Modificar"
-        Me.btnModificarVenta.UseVisualStyleBackColor = True
         '
         'dgvListados
         '
@@ -66,25 +59,48 @@ Partial Class FrmVentas
         Me.btnViewVenta.Text = "Ver"
         Me.btnViewVenta.UseVisualStyleBackColor = True
         '
+        'dgvItemsVentas
+        '
+        Me.dgvItemsVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvItemsVentas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.dgvItemsVentas.Location = New System.Drawing.Point(53, 23)
+        Me.dgvItemsVentas.Name = "dgvItemsVentas"
+        Me.dgvItemsVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvItemsVentas.Size = New System.Drawing.Size(370, 231)
+        Me.dgvItemsVentas.TabIndex = 28
+        Me.dgvItemsVentas.Visible = False
+        '
+        'btnAtrasVentas
+        '
+        Me.btnAtrasVentas.Location = New System.Drawing.Point(482, 225)
+        Me.btnAtrasVentas.Name = "btnAtrasVentas"
+        Me.btnAtrasVentas.Size = New System.Drawing.Size(75, 44)
+        Me.btnAtrasVentas.TabIndex = 29
+        Me.btnAtrasVentas.Text = "Atras"
+        Me.btnAtrasVentas.UseVisualStyleBackColor = True
+        '
         'FrmVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(606, 401)
+        Me.Controls.Add(Me.btnAtrasVentas)
+        Me.Controls.Add(Me.dgvItemsVentas)
         Me.Controls.Add(Me.btnViewVenta)
         Me.Controls.Add(Me.dgvListados)
         Me.Controls.Add(Me.btnEliminarVenta)
-        Me.Controls.Add(Me.btnModificarVenta)
         Me.Name = "FrmVentas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmVentas"
         CType(Me.dgvListados, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvItemsVentas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents btnEliminarVenta As Button
-    Friend WithEvents btnModificarVenta As Button
     Private WithEvents dgvListados As DataGridView
     Friend WithEvents btnViewVenta As Button
+    Private WithEvents dgvItemsVentas As DataGridView
+    Friend WithEvents btnAtrasVentas As Button
 End Class
